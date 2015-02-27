@@ -16,8 +16,7 @@
   <tbody>
     <% @resources.each do |resource| %>
       <tr>
-        <td><%= resource.title %></td>
-        <td><%= resource.link %></td>
+        <td><%= link_to resource.title, resource.link, target: "_blank" %></td>
         <td><%= resource.notes %></td>
         <td><%= resource.category.name %></td>
         <td><%= link_to 'Show', resource %></td>
@@ -30,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Resource', new_resource_path %>
+<%= link_to 'New Resource', new_resource_path, :class => "btn", type: "button" %>

@@ -11,23 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, type: "text", :class => "form-control", placeholder: "Resource name" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :link %><br>
-    <%= f.text_area :link %>
+    <%= f.text_area :link, type: "url", :class => "form-control", placeholder: "www.example.com"%>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :notes %><br>
-    <%= f.text_area :notes %>
+    <%= f.text_area :notes, type: "text", :class => "form-control", placeholder: "Useful notes about the resource" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :category_id %><br>
-    <%= f.collection_select :category_id, @categories, :id, :name %>
+    <%= f.collection_select :category_id, @categories, :id, :name, {prompt: 'Select a category'}, {class: 'form-control'} %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "btn", type: "submit", :class => "btn btn-default" %>
   </div>
 <% end %>
