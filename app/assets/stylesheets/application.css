@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+a:visited {
+  color: white;
+}
+
+.fa {
+  color: #ccc;
+}
+
+a:hover .fa {
+  color: black;
+  background-color: white;
+}

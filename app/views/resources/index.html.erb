@@ -1,12 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Resources</h1>
+<h1>Great Web Dev Resources</h1>
 
 <table class="table">
   <thead>
     <tr>
       <th>Title</th>
-      <th>Link</th>
       <th>Notes</th>
       <th>Category</th>
       <th colspan="3"></th>
@@ -16,12 +15,11 @@
   <tbody>
     <% @resources.each do |resource| %>
       <tr>
-        <td><%= link_to resource.title, resource.link, target: "_blank" %></td>
+        <td><%= link_to resource.title, resource.link, target: "_blank", :class => "btn btn-info" %></td>
         <td><%= resource.notes %></td>
         <td><%= resource.category.name %></td>
-        <td><%= link_to 'Show', resource %></td>
-        <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
-        <td><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_resource_path(resource), :class => "btn btn-default" %></td>
+        <td><%= link_to 'Delete', resource, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,4 +27,4 @@
 
 <br>
 
-<%= link_to 'New Resource', new_resource_path, :class => "btn", type: "button" %>
+<%= link_to 'New Resource', new_resource_path, :class => "btn btn-default", type: "button" %>
