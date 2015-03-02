@@ -33,9 +33,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 # This gem allows us to pull in Bootswatch themes
-gem 'starter_generators'
+# gem 'starter_generators'
 
-gem 'bootstrap-sass', '~>3.3.3'
+# gem 'bootstrap-sass', '~>3.3.3'
 
 # Don't want WEBrick
 gem 'thin'
