@@ -14,15 +14,8 @@
  *= require_self
  */
 
-a:visited {
-  color: white;
-}
+@import "bootstrap";
 
-.fa {
-  color: #ccc;
-}
-
-a:hover .fa {
-  color: black;
-  background-color: white;
+body {
+  padding-top: 50px;
 }

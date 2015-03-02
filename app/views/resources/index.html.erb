@@ -15,11 +15,11 @@
   <tbody>
     <% @resources.each do |resource| %>
       <tr>
-        <td><%= link_to resource.title, resource.link, target: "_blank", :class => "btn btn-info" %></td>
+        <td><%= link_to resource.title, resource.link, target: "_blank", :class => "resource-link" %></td>
         <td><%= resource.notes %></td>
         <td><%= resource.category.name %></td>
-        <td><%= link_to 'Edit', edit_resource_path(resource), :class => "btn btn-default" %></td>
-        <td><%= link_to 'Delete', resource, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default" %></td>
+        <td><%= link_to 'Edit', edit_resource_path(resource), :class => "btn btn-default btn-xs" %></td>
+        <td><%= link_to 'Delete', resource, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default btn-xs" %></td>
       </tr>
     <% end %>
   </tbody>
