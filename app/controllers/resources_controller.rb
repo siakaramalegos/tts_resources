@@ -4,7 +4,12 @@ class ResourcesController < ApplicationController
   # GET /resources
   # GET /resources.json
   def index
-    @resources = Resource.all.order('title')
+    if params[:category_id]
+      @resources = Resource.where(category_id: params[:category_id].split(","))
+    else
+      @resources = Resource.all
+    end
+    @resources.order!('title') #.order('LOWER(title)')
   end
 
   # GET /resources/1
