@@ -7,7 +7,7 @@
 <div>
   Filter by:
   <% @categories.each do |category| %>
-    <a href="?category_ids=<%= category.id%>" class="filter"><%= category.name %> </a>
+    <a href="?category_ids=<%= category.id%>" class="filter"><button class="btn btn-warning btn-xs"><%= category.name %></button></a>
   <% end %>
 </div>
 
