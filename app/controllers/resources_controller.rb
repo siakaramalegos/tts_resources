@@ -5,8 +5,10 @@ class ResourcesController < ApplicationController
   # GET /resources
   # GET /resources.json
   def index
-    if params[:category_id]
-      @resources = Resource.where(category_id: params[:category_id].split(","))
+    @categories = Category.all
+    category_ids=params[:category_ids]
+    if params[:category_ids]
+      @resources = Resource.where(category_id: params[:category_ids].split(","))
     else
       @resources = Resource.all
     end

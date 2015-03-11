@@ -2,6 +2,16 @@
 
 <h1>Great Web Dev Resources</h1>
 
+<div class="field form-group">
+
+<div>
+  Filter by:
+  <% @categories.each do |category| %>
+    <a href="?category_ids=<%= category.id%>" class="filter"><%= category.name %> </a>
+  <% end %>
+</div>
+
+
 <table class="table">
   <thead>
     <tr>

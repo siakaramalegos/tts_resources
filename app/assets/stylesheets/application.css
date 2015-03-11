@@ -18,3 +18,7 @@ body {
   padding-top: 50px;
   font-family: 'Lato', sans-serif;
 }
+
+.filter {
+  padding-right: 10px;
+}
