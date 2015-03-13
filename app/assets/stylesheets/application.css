@@ -22,3 +22,7 @@ body {
 .filter {
   padding-left: 10px;
 }
+
+.navbar-right {
+  margin-right: 0;
+}
