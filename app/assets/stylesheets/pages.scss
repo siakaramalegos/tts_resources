@@ -2,3 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.jumbotron {
+  background: image-url("macdesk.jpg") no-repeat fixed;
+  height: 500px;
+  color: white;
+
+  .boxy {
+    background-color: rgba(0,0,0,0.5);
+    padding: 40px;
+  }
+}
