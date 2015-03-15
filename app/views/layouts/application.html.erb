@@ -59,5 +59,22 @@
 
     <%= yield %>
   </div>
+
+ <footer>
+    <div class="container-fluid footer">
+      <div class="col-sm-4 left">
+        TTS Resources &copy; <%= Time.now.year %>
+      </div>
+
+      <div class="col-sm-4 center">
+        <%= link_to "Contributors", pages_about_path %>
+      </div>
+
+      <div class="col-sm-4 right">
+        <a href="https://github.com/siakaramalegos/tts_resources" target="_blank">Sourcecode</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>

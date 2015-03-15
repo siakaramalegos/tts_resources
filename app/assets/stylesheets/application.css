@@ -14,11 +14,51 @@
  *= require_self
  */
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
-  padding-top: 50px;
+  /*padding-top: 50px; with the sticky footer, there can be no padding in the body*/
   font-family: 'Lato', sans-serif;
+  margin-bottom: 60px;
 }
 
 .filter {
   padding-left: 10px;
+}
+
+.footer {
+  height: 40px;
+  background-color: #9D9D9D;
+  color: #DDDDDD;
+  padding-top: 10px;
+  margin-top: 20px;
+  overflow: auto;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  left: 0px;
+}
+
+a {
+  color: #DDDDDD;
+  text-decoration: none
+}
+
+a:hover {
+  color: #808080 ;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
 }
