@@ -33,6 +33,10 @@ body {
   margin-right: 0;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .footer {
   height: 40px;
   background-color: #9D9D9D;
@@ -46,12 +50,12 @@ body {
   left: 0px;
 }
 
-a {
+.footer a {
   color: #DDDDDD;
   text-decoration: none
 }
 
-a:hover {
+.footer a:hover {
   color: white;
   text-decoration: none;
 }
