@@ -52,7 +52,8 @@ a {
 }
 
 a:hover {
-  color: #808080 ;
+  color: white;
+  text-decoration: none;
 }
 
 .left {
