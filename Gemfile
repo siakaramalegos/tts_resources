@@ -52,6 +52,17 @@ group :development, :test do
 
   # Quiet those assets down!  Reduces noise in the logs
   gem 'quiet_assets'
+
+  # add Pry for debugging information
+  gem 'pry'
+  gem 'pry-rails'
+
+  # Annotate models
+  gem 'annotate'
+
+  # Populate false sample data
+  gem 'populate'
+  gem 'faker'
 end
 
 group :production do
