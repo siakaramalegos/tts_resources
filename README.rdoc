@@ -1,28 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TTS Resources is a community open-source Rails project for current students and alumni of Tech Talent South's coding bootcamp.  Any student or alum is welcome to contribute.
 
-Things you may want to cover:
+To contribute, fork this repo, then clone your forked copy to you local machine.  Create a feature branch using a branch name that is descriptive of what you want to change.  Make your changes, then commit and push that branch to Github where you can generate the pull request to this master.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Note that this project has a special `rake db:populate` command.  It will automatically populate your development database so you can see what the application would look like with more data.  If you have data and are running in PostgreSQL, run rake db:drop then rake db:setup before you run populate.
