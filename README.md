@@ -1,4 +1,4 @@
-== README
+## README
 
 TTS Resources is a community open-source Rails project for current students and alumni of Tech Talent South's coding bootcamp.  Any student or alum is welcome to contribute.
 
