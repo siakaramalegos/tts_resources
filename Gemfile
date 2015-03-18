@@ -61,7 +61,7 @@ group :development, :test do
   gem 'annotate'
 
   # Populate false sample data
-  gem 'populate'
+  gem 'populator'
   gem 'faker'
 end
 
