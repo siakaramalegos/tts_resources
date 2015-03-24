@@ -1,0 +1,19 @@
+branches:
+  only:
+    - 'master'
+
+language: ruby
+rvm:
+  - 2.1.5
+  - 2.1.0
+  - jruby-18mode
+  - jruby-19mode
+  - rbx-2
+  - ruby-head
+  - jruby-head
+  - ree
+  - rbx
+# uncomment this line if your project needs to run something other than `rake`:
+# script: bundle exec rspec spec
+
+script: bundle exec rake test
