@@ -47,7 +47,6 @@
   </nav>
 
   <div class="container">
-    <%= yield %>
 
     <% if notice.present? %>
       <div class="alert alert-dismissable alert-success">
@@ -56,8 +55,7 @@
       </div>
     <% end %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= yield %>
   </div>
 
  <footer>
