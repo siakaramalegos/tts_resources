@@ -12,17 +12,15 @@ class ResourcesControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
-    user = FactoryGirl.create(:user)
-    login_as(user, :scope => :user)
+    sign_in User.first
     get :new
     assert_response :success
   end
 
   test "should create resource" do
-    user = FactoryGirl.create(:user)
-    login_as(user, :scope => :user)
+    sign_in User.first
     assert_difference('Resource.count') do
-      post :create, resource: { category_id: @resource.category_id, link: @resource.link, notes: @resource.notes, title: @resource.title }
+      post :create, resource: { category_id: @resource.category_id, link: (@resource.link + '/created'), notes: @resource.notes, title: (@resource.title + 'created') }
     end
 
     assert_redirected_to resource_path(assigns(:resource))
@@ -34,16 +32,19 @@ class ResourcesControllerTest < ActionController::TestCase
   end
 
   test "should get edit" do
+    sign_in User.first
     get :edit, id: @resource
     assert_response :success
   end
 
   test "should update resource" do
+    sign_in User.first
     patch :update, id: @resource, resource: { category_id: @resource.category_id, link: @resource.link, notes: @resource.notes, title: @resource.title }
     assert_redirected_to resource_path(assigns(:resource))
   end
 
   test "should destroy resource" do
+    sign_in User.first
     assert_difference('Resource.count', -1) do
       delete :destroy, id: @resource
     end

@@ -12,17 +12,15 @@ class CategoriesControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
-    user = FactoryGirl.create(:user)
-    login_as(user, :scope => :user)
+    sign_in User.first
     get :new
     assert_response :success
   end
 
   test "should create category" do
-    user = FactoryGirl.create(:user)
-    login_as(user, :scope => :user)
+    sign_in User.first
     assert_difference('Category.count') do
-      post :create, category: { description: @category.description, name: @category.name }
+      post :create, category: { description: @category.description, name: (@category.name + "created") }
     end
 
     assert_redirected_to category_path(assigns(:category))
@@ -34,22 +32,19 @@ class CategoriesControllerTest < ActionController::TestCase
   end
 
   test "should get edit" do
-    user = FactoryGirl.create(:user)
-    login_as(user, :scope => :user)
+    sign_in User.first
     get :edit, id: @category
     assert_response :success
   end
 
   test "should update category" do
-    user = FactoryGirl.create(:user)
-    login_as(user, :scope => :user)
+    sign_in User.first
     patch :update, id: @category, category: { description: @category.description, name: @category.name }
     assert_redirected_to category_path(assigns(:category))
   end
 
   test "should destroy category" do
-    user = FactoryGirl.create(:user)
-    login_as(user, :scope => :user)
+    sign_in User.first
     assert_difference('Category.count', -1) do
       delete :destroy, id: @category
     end
