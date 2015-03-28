@@ -1,5 +1,4 @@
 ## README
-[![Build Status](https://travis-ci.org/siakaramalegos/tts_resources.svg?branch=master)](https://travis-ci.org/siakaramalegos/tts_resources)
 
 TTS Resources is a community open-source Rails project for current students and alumni of Tech Talent South's coding bootcamp.  Any student or alum is welcome to contribute.
 

@@ -1,16 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  link: MyText
-  notes: MyText
+  title: Link1
+  link: www.example.com
+  notes: MyText is long enough to not trigger an error
   category_id: 1
 
 two:
   title: MyString
   link: MyText
   notes: MyText
-  category_id: 1
+  category_id: 2
 
 # == Schema Information
 #

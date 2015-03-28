@@ -1,12 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyText
+  id: 1
+  name: Category1
+  description: MyText is long enough to not trigger an error
 
 two:
-  name: MyString
-  description: MyText
+  id: 2
+  name: Category2
+  description: MyText is long enough to not trigger an error
 
 # == Schema Information
 #

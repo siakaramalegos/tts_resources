@@ -12,11 +12,15 @@ class ResourcesControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
     get :new
     assert_response :success
   end
 
   test "should create resource" do
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
     assert_difference('Resource.count') do
       post :create, resource: { category_id: @resource.category_id, link: @resource.link, notes: @resource.notes, title: @resource.title }
     end
