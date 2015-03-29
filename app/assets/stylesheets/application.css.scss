@@ -71,3 +71,20 @@ a:hover {
 .right {
   text-align: right;
 }
+
+.devise {
+  background-color: rgba(0,0,0,0.2);
+  padding: 1em 3em 3em 3em;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 500px;
+
+  div.other-links {
+    margin-top: 0.7em;
+
+    a {
+      padding: 5px 0 5px 0;
+    }
+  }
+}
