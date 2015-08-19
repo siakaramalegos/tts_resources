@@ -8,10 +8,10 @@ namespace :db do
     [Category, Resource, User].each(&:destroy_all)
 
     # Add category and resources
-    Category.populate 30 do |category|
+    Category.populate 10 do |category|
       category.name = Faker::Commerce.department
       category.description = Faker::Company.bs
-      Resource.populate 10..100 do |resource|
+      Resource.populate 10..20 do |resource|
         resource.category_id = category.id
         resource.title = Faker::App.name
         resource.link = Faker::Internet.url
