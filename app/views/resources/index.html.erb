@@ -4,7 +4,7 @@
 <p>Filter by:</p>
 <p>
   <%= link_to "Show All", categories_path, class: "btn btn-default btn-xs filter" %>
-  <% @categories.each do |category| %>
+  <% @categories.order(:name).each do |category| %>
     <a href="?category_ids=<%= category.id%>"><button class="btn btn-warning btn-xs filter"><%= category.name %></button></a>
   <% end %>
 </p>
