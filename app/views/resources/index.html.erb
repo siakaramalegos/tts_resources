@@ -1,12 +1,13 @@
 <h1>Great Web Dev Resources</h1>
 
-<div class="field form-group">
-
-<div>
-  Filter by:
+<div class="well">
+<p>Filter by:</p>
+<p>
+  <%= link_to "Show All", categories_path, class: "btn btn-default btn-xs filter" %>
   <% @categories.each do |category| %>
-    <a href="?category_ids=<%= category.id%>" class="filter"><button class="btn btn-warning btn-xs"><%= category.name %></button></a>
+    <a href="?category_ids=<%= category.id%>"><button class="btn btn-warning btn-xs filter"><%= category.name %></button></a>
   <% end %>
+</p>
 </div>
 
 
