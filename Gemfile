@@ -42,6 +42,7 @@ gem 'thin'
 gem 'devise'
 
 gem 'activeadmin', github: 'activeadmin'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'sqlite3'
