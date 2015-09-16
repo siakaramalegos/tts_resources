@@ -20,6 +20,15 @@
         <li><%= link_to 'About', 'pages/about' %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+
+        <%= form_tag("/resources", method: "get", role: "search", class: "navbar-form navbar-left") do %>
+          <div class="form-group">
+            <%= text_field_tag("search", nil, placeholder: "Search Resources", class: "form-control input-sm") %>
+          </div>
+          <%= submit_tag("Search", class: "btn btn-default btn-sm") %>
+        <% end %>
+
+
         <%= render 'devise/menu/registration_items' %>
         <%= render 'devise/menu/login_items' %>
       </ul>

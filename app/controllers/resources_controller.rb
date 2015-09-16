@@ -13,6 +13,16 @@ class ResourcesController < ApplicationController
       @resources = Resource.all
     end
     @resources.order!('title') #.order('LOWER(title)')
+
+    if params[:search]
+      @resources = Resource.where("title LIKE ?", "%#{params[:search]}%")
+      if @resources.size.zero?
+        flash[:notice] = "No results found.  Try again!"
+        @resources = Resource.all?
+      end
+    else
+      @resource = Resource.all
+    end
   end
 
   # GET /resources/1
