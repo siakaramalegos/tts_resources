@@ -1,5 +1,8 @@
+
 <h1>Categories</h1>
 <blockquote><em>Click on a category to see links and resources for that category!</em></blockquote>
+
+<p><%= link_to 'New Category', new_category_path, :class => "btn btn-default" %></p>
 
 <div class="row">
   <% @categories.each do |category| %>
@@ -23,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Category', new_category_path, :class => "btn btn-default" %>
+
