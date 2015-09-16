@@ -25,7 +25,11 @@
   </div>
   <div class="field form-group">
     <%= f.label :category_id %><br>
-    <%= f.collection_select :category_id, @categories.order(:name), :id, :name, {prompt: 'Select a category'}, {class: 'form-control'} %>
+    <% if params[:cat_id] %>
+      <%= f.collection_select :category_id, @categories.order(:name), :id, :name, {prompt: 'Select a category', :selected => params[:cat_id], class: 'form-control'} %>
+    <% else %>
+      <%= f.collection_select :category_id, @categories.order(:name), :id, :name, {prompt: 'Select a category'}, {class: 'form-control'} %>
+    <% end %>
   </div>
   <div class="actions">
     <%= f.submit :class => "btn", type: "submit", :class => "btn btn-default" %>
