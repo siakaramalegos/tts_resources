@@ -5,7 +5,7 @@
 <p>
   <%= link_to "Show All", resources_path, class: "btn btn-default btn-xs filter" %>
   <% @categories.order(:name).each do |category| %>
-    <a href="?category_ids=<%= category.id%>"><button class="btn btn-warning btn-xs filter"><%= category.name %></button></a>
+    <a href="?category_ids=<%= category.id%>"><button class="btn btn-warning btn-xs filter <%= 'active' if params[:category_ids].to_i == category.id %>"><%= category.name %></button></a>
   <% end %>
 </p>
 <p>
