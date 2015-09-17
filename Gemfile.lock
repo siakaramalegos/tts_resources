@@ -54,14 +54,21 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    acts_as_votable (0.10.0)
+    addressable (2.3.8)
     annotate (2.6.8)
       activerecord (>= 3.2, <= 4.3)
       rake (~> 10.4)
     arbre (1.0.3)
       activesupport (>= 3.0.0)
     arel (6.0.0)
+    awesome_print (1.6.1)
     bcrypt (3.1.10)
     bcrypt (3.1.10-x86-mingw32)
+    better_errors (2.1.1)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+      rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bourbon (4.2.1)
@@ -126,6 +133,10 @@ GEM
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    launchy (2.4.3)
+      addressable (~> 2.3)
+    letter_opener (1.4.1)
+      launchy (~> 2.2)
     loofah (2.0.1)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -254,7 +265,10 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  acts_as_votable (~> 0.10.0)
   annotate
+  awesome_print
+  better_errors
   byebug
   coffee-rails (~> 4.1.0)
   devise
@@ -262,6 +276,7 @@ DEPENDENCIES
   font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
+  letter_opener
   pg
   populator
   pry
@@ -279,4 +294,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.10.5
+   1.10.6

@@ -35,14 +35,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # gem 'bootstrap-sass', '~>3.3.3'
 
-# Don't want WEBrick
 gem 'thin'
-
-# Add user authentication
 gem 'devise'
-
 gem 'activeadmin', github: 'activeadmin'
 gem 'font-awesome-rails'
+gem 'acts_as_votable', '~> 0.10.0'
+gem 'awesome_print'
 
 group :development, :test do
   gem 'sqlite3'
@@ -51,9 +49,6 @@ group :development, :test do
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
-  # Quiet those assets down!  Reduces noise in the logs
-  gem 'quiet_assets'
 
   # add Pry for debugging information
   gem 'pry'
@@ -68,10 +63,14 @@ group :development, :test do
 end
 
 group :production do
-  # Use postgresql as the database for Active Record
   gem 'pg'
-  # Heroku thing
   gem 'rails_12factor'
+end
+
+group :development do
+  gem 'better_errors'
+  gem 'quiet_assets'
+  gem 'letter_opener'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
