@@ -1,22 +1,14 @@
-<p>
-  <strong>Title:</strong>
-  <%= @resource.title %>
-</p>
-
-<p>
-  <strong>Link:</strong>
-  <%= @resource.link %>
-</p>
-
-<p>
-  <strong>Notes:</strong>
-  <%= @resource.notes %>
-</p>
-
+<h3><%= @resource.title %></h3>
 <p>
   <strong>Category:</strong>
-  <%= @resource.category_id %>
+  <%= @resource.category.name %>
+</p>
+<p>
+  <%= @resource.notes %>
+</p>
+<p>
+  <%= link_to @resource.link, @resource.link, target: "_blank" %>
 </p>
 
-<%= link_to 'Edit', edit_resource_path(@resource) %> |
-<%= link_to 'Back', resources_path %>
+<%= link_to fa_icon('pencil', text: 'Edit'), edit_resource_path(@resource), class: "btn btn-default" %>
+<%= link_to fa_icon('list', text: 'All Resources'), resources_path, class: "btn btn-default" %>
