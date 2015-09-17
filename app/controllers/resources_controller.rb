@@ -17,7 +17,7 @@ class ResourcesController < ApplicationController
       @resources = Resource.where("title LIKE ? OR notes LIKE ?", "%#{params[:search]}%", "%#{params[:search].downcase}%")
       if @resources.size.zero?
         flash[:notice] = "No results found.  Try again!"
-        @resources = Resource.all?
+        @resources = Resource.all
       end
     else
       @resource = Resource.all
