@@ -5,6 +5,16 @@ class Resource < ActiveRecord::Base
   validates :link, presence: true, length: {minimum: 4}, uniqueness: true
   validates :notes, presence: true, length: {in: 10..600}
   validates :category_id, presence: true
+
+  acts_as_votable
+
+  def upvotes
+    self.get_upvotes.size
+  end
+
+  def downvotes
+    self.get_downvotes.size
+  end
 end
 
 # == Schema Information

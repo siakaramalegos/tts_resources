@@ -26,7 +26,7 @@
   <tbody>
     <% @resources.each do |resource| %>
       <tr>
-        <td><%= link_to resource.title, resource.link, target: "_blank", :class => "resource-link" %></td>
+        <td><%= link_to resource.title, resource.link, target: "_blank", :class => "resource-link" %> <%= link_to fa_icon('thumbs-up', text: resource.upvotes), upvote_resource_path(resource), method: :put %> <%= link_to fa_icon('thumbs-down', text: resource.downvotes), downvote_resource_path(resource), method: :put %></td>
         <td><%= resource.notes %></td>
         <td><%= resource.category.name %></td>
         <td><%= link_to 'Edit', edit_resource_path(resource), :class => "btn btn-default btn-xs" %></td>
