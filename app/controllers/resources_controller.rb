@@ -12,7 +12,6 @@ class ResourcesController < ApplicationController
     else
       @resources = Resource.all
     end
-    @resources.order!('title') #.order('LOWER(title)')
 
     if params[:search]
       @resources = Resource.where("title LIKE ? OR notes LIKE ?", "%#{params[:search]}%", "%#{params[:search].downcase}%")
@@ -22,8 +21,10 @@ class ResourcesController < ApplicationController
       end
     else
       @resource = Resource.all
-
     end
+
+    # Make sure resources are listed in order of title
+    @resources.order!(:title)
   end
 
   # GET /resources/1
