@@ -1,6 +1,6 @@
 class ResourcesController < ApplicationController
-  before_action :set_resource, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :edit, :update, :create, :destroy]
+  before_action :set_resource, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
+  before_action :authenticate_user!, only: [:new, :edit, :update, :create, :destroy, :upvote, :downvote]
 
   # GET /resources
   # GET /resources.json
@@ -83,6 +83,16 @@ class ResourcesController < ApplicationController
       format.html { redirect_to resources_url, notice: 'Resource was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def upvote
+    @resource.vote_by :voter => current_user
+    redirect_to :back
+  end
+
+  def downvote
+    @resource.downvote_from current_user
+    redirect_to :back
   end
 
   private

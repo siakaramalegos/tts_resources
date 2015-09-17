@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
-  resources :resources
+  resources :resources do
+    member do
+      put 'upvote', to: 'resources#upvote'
+      put 'downvote', to: 'resources#downvote'
+    end
+  end
 
   resources :categories
 
   get 'pages/home'
-
   get 'pages/about'
 
   # The priority is based upon order of creation: first created -> highest priority.

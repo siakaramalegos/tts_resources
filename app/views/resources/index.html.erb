@@ -8,34 +8,19 @@
     <a href="?category_ids=<%= category.id%>"><button class="btn btn-warning btn-xs filter"><%= category.name %></button></a>
   <% end %>
 </p>
+<p>
+  <%= link_to 'Add a New Resource!', new_resource_path, :class => "btn btn-success", type: "button" %>
+</p>
 </div>
 
-<%= link_to 'New Resource', new_resource_path, :class => "btn btn-default", type: "button" %>
 
+<% @resources.group_by(&:category).each do |category, resources| %>
+  <div class="well">
+    <h3 class="brand-text"><%= category.name %></h3>
+    <%= render resources.sort_by(&:netvotes).reverse %>
+  </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Notes</th>
-      <th>Category</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<% end %>
 
-  <tbody>
-    <% @resources.each do |resource| %>
-      <tr>
-        <td><%= link_to resource.title, resource.link, target: "_blank", :class => "resource-link" %></td>
-        <td><%= resource.notes %></td>
-        <td><%= resource.category.name %></td>
-        <td><%= link_to 'Edit', edit_resource_path(resource), :class => "btn btn-default btn-xs" %></td>
-        <td><%= link_to 'Delete', resource, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default btn-xs" %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
 
 
