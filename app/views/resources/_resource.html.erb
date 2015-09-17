@@ -1,0 +1,15 @@
+<div class="row resource">
+  <div class="col-sm-2 text-center">
+    <div class="vote-box">
+      <%= link_to fa_icon('chevron-up lg'), upvote_resource_path(resource), method: :put %><br>
+      <%= resource.netvotes %><br>
+      <%= link_to fa_icon('chevron-down lg'), downvote_resource_path(resource), method: :put %>
+    </div>
+  </div>
+  <div class="col-sm-10">
+    <%= link_to resource.link, target: "_blank", :class => "resource-link" do %>
+      <h4><%= resource.title %> <%= fa_icon "external-link", class: "fa-sm" %></h4>
+    <% end %>
+    <p><%= resource.notes %>  <%= link_to fa_icon('pencil'), edit_resource_path(resource) %>  <%= link_to fa_icon('trash-o'), resource, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  </div>
+</div>

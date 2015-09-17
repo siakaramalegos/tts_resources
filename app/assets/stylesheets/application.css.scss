@@ -25,6 +25,35 @@ body {
   margin-bottom: 60px;
 }
 
+.brand-text {
+  color: #f0ad4e;
+  font-weight: 700;
+}
+
+.fa-sm {
+  font-size: 0.6em;
+}
+
+.vote-box {
+  // background-color: rgba(240, 173, 78, 0.5);
+  // border-radius: 5px;
+  // width: 80px;
+  // margin: 0 auto;
+  color: #AAA;
+  font-weight: 500;
+  a {
+    color: #CCC;
+
+    &:hover {
+      color: #AAA;
+    }
+  }
+}
+
+.resource {
+  margin-top: 10px;
+}
+
 .filter {
   margin-bottom: 2px;
 }

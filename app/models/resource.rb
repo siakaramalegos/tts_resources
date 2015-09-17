@@ -15,6 +15,10 @@ class Resource < ActiveRecord::Base
   def downvotes
     self.get_downvotes.size
   end
+
+  def netvotes
+    self.get_upvotes.size - self.get_downvotes.size
+  end
 end
 
 # == Schema Information
