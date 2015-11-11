@@ -10,5 +10,31 @@
   .boxy {
     background-color: rgba(0,0,0,0.5);
     padding: 40px;
-  }
-}
+  } /* boxy */
+} /* jumbotron */
+
+.contributor {
+  float: left;
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+  height: 275px;
+  overflow: scroll;
+  border: 1px solid #f1f1f1;
+  img {
+    width: 100%;
+    margin-bottom: 5px; 
+  } /* img */ 
+  .fa {
+     font-size: 20px;
+     margin: 0px 3px; 
+   } /* .fa */
+   p {
+     line-height: 1em; 
+     margin-bottom: 3px;
+   } /* p */
+   .name {
+     font-weight: bold;
+     font-size: 110%; 
+   } /* .name */      
+} /* contributor */
