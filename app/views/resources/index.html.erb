@@ -15,8 +15,8 @@
 
 
 <% @resources.group_by(&:category).each do |category, resources| %>
-  <div class="well">
-    <h3 class="brand-text"><%= category.name %></h3>
+  <h3 class="brand-text"><%= category.name %></h3>
+  <div class="row">
     <%= render resources.sort_by(&:netvotes).reverse %>
   </div>
 <% end %>
