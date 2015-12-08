@@ -96,6 +96,10 @@ class ResourcesController < ApplicationController
     redirect_to :back
   end
 
+  def favorites
+    @resources = current_user.get_up_voted(Resource)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_resource

@@ -1,0 +1,9 @@
+<h1>Your favorite resources</h1>
+
+<% if @resources.empty? %>
+  <p>You have no favorites yet.  Go out and vote on some resources!</p>
+<% else %>
+  <div class="row">
+    <%= render @resources %>
+  </div>
+<% end %>

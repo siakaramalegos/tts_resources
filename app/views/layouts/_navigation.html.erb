@@ -30,7 +30,12 @@
 
 
         <%= render 'devise/menu/registration_items' %>
+        <% if user_signed_in? %>
+          <li><%= link_to "Favorite resources", favorites_url %></li>
+        <% end %>
         <%= render 'devise/menu/login_items' %>
+
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </nav>
