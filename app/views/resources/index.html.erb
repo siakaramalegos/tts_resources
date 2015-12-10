@@ -1,7 +1,7 @@
 <h1>Great Web Dev Resources</h1>
 
 <div class="row">
-  <div class="col-sm-4 col-md-3">
+  <div class="col-sm-3 col-md-3">
     <div class="well">
       <h4>Search</h4>
       <%= form_tag("/resources", method: "get", role: "search", class: "form") do %>
@@ -24,7 +24,7 @@
     </div>
   </div>
 
-  <div class="col-sm-8 col-md-9">
+  <div class="col-sm-9 col-md-9">
     <% @resources.group_by(&:category).each do |category, resources| %>
       <h3 class="brand-text"><%= category.name %></h3>
       <div class="row">
