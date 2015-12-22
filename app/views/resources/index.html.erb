@@ -1,25 +1,42 @@
 <h1>Great Web Dev Resources</h1>
 
-<div class="well">
-<p>Filter by:</p>
-<p>
-  <%= link_to "Show All", resources_path, class: "btn btn-default btn-xs filter" %>
-  <% @categories.order(:name).each do |category| %>
-    <a href="?category_ids=<%= category.id%>"><button class="btn btn-default btn-xs filter <%= 'active' if params[:category_ids].to_i == category.id %>"><%= category.name %></button></a>
-  <% end %>
-</p>
-<p>
-  <%= link_to 'Add a New Resource!', new_resource_path, :class => "btn btn-primary", type: "button" %>
-</p>
+<div class="row">
+  <div class="col-sm-3 col-md-3">
+    <div class="well">
+      <h4>Search</h4>
+      <%= form_tag("/resources", method: "get", role: "search", class: "form") do %>
+        <div class="form-group">
+          <%= text_field_tag("search", nil, placeholder: "Search Resources", class: "form-control") %>
+        </div>
+        <%= button_tag( fa_icon('search', text: "Search"), class: "btn btn-primary") %>
+      <% end %>
+      <br>
+      <h4>Filter</h4>
+      <p>
+        <%= link_to "Show All", resources_path, class: "btn btn-default btn-xs filter" %>
+        <% @categories.order(:name).each do |category| %>
+          <a href="?category_ids=<%= category.id%>"><button class="btn btn-default btn-xs filter <%= 'active' if params[:category_ids].to_i == category.id %>"><%= category.name %></button></a>
+        <% end %>
+      </p>
+      <p>
+        <%= link_to fa_icon('plus', text: 'Add Resource'), new_resource_path, :class => "btn btn-primary", type: "button" %>
+      </p>
+    </div>
+  </div>
+
+  <div class="col-sm-9 col-md-9">
+    <% @resources.group_by(&:category).each do |category, resources| %>
+      <h3 class="brand-text"><%= category.name %></h3>
+      <div class="row">
+        <%= render resources.sort_by(&:netvotes).reverse %>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 
-<% @resources.group_by(&:category).each do |category, resources| %>
-  <div class="well">
-    <h3 class="brand-text"><%= category.name %></h3>
-    <%= render resources.sort_by(&:netvotes).reverse %>
-  </div>
-<% end %>
+
+
 
 
 

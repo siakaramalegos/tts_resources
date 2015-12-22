@@ -1,0 +1,193 @@
+/* line 5, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/pages.scss */
+.jumbotron {
+  background: url(/assets/macdesk-d2e5596812ee9c0da4ca3da9c383ed9f.jpg) no-repeat fixed;
+  height: 500px;
+  color: white;
+  /* boxy */
+}
+/* line 10, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/pages.scss */
+.jumbotron .boxy {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+}
+
+/* jumbotron */
+/* line 16, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/pages.scss */
+.contributor {
+  float: left;
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+  height: 275px;
+  overflow: scroll;
+  border: 1px solid #f1f1f1;
+  /* img */
+  /* .fa */
+  /* p */
+  /* .name */
+}
+/* line 24, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/pages.scss */
+.contributor img {
+  width: 100%;
+  margin-bottom: 5px;
+}
+/* line 28, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/pages.scss */
+.contributor .fa {
+  font-size: 20px;
+  margin: 0px 3px;
+}
+/* line 32, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/pages.scss */
+.contributor p {
+  line-height: 1em;
+  margin-bottom: 3px;
+}
+/* line 36, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/pages.scss */
+.contributor .name {
+  font-weight: bold;
+  font-size: 110%;
+}
+
+/* contributor */
+/* line 5, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/resources.scss */
+.resource-icons {
+  margin-top: 10px;
+  float: right;
+}
+
+/* .resource-icons */
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+/* line 18, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* line 23, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+body {
+  padding-top: 50px;
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 60px;
+}
+
+/* line 29, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+.brand-text {
+  color: #777;
+  font-weight: 700;
+}
+
+/* line 34, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+.fa-sm {
+  font-size: 0.6em;
+}
+
+/* line 38, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+.panel {
+  overflow: hidden;
+}
+
+/* line 42, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+.vote-box {
+  color: #AAA;
+  font-weight: 500;
+}
+/* line 49, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+.vote-box a {
+  color: #CCC;
+}
+/* line 52, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+.vote-box a:hover {
+  color: #AAA;
+}
+
+/* line 58, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+.resource {
+  margin-top: 10px;
+}
+
+/* line 62, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+.filter {
+  margin-bottom: 2px;
+}
+
+/* line 66, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+.navbar-right {
+  margin-right: 0;
+}
+
+/* line 70, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 74, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+.footer {
+  height: 40px;
+  background-color: #9D9D9D;
+  color: #DDDDDD;
+  padding-top: 10px;
+  margin-top: 20px;
+  overflow: auto;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  left: 0px;
+}
+
+/* line 87, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+.footer a {
+  color: #DDDDDD;
+  text-decoration: none;
+}
+
+/* line 92, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+.footer a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 97, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+.left {
+  text-align: left;
+}
+
+/* line 101, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+.center {
+  text-align: center;
+}
+
+/* line 105, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+.right {
+  text-align: right;
+}
+
+/* line 109, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+.devise {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1em 3em 3em 3em;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 500px;
+}
+/* line 117, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+.devise div.other-links {
+  margin-top: 0.7em;
+}
+/* line 120, /Users/sia1/Projects/tts_resources/app/assets/stylesheets/application.css.scss */
+.devise div.other-links a {
+  padding: 5px 0 5px 0;
+}

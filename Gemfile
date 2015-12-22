@@ -41,6 +41,7 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'font-awesome-rails'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'awesome_print'
+gem 'stamp'
 
 group :development, :test do
   gem 'sqlite3'

@@ -9,5 +9,37 @@
   </div>
 </div>
 
+<div class="container">
 
-<div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Newest Resources</h3>
+      <% @newest_resources.each do |resource| %>
+        <div class="panel panel-default">
+          <div class="panel-body">
+          <small class="pull-right">Added on <%= resource.created_at.stamp('Jan 1, 2015') %></small>
+          <h4><a href="<%= resource.link %>" target="_blank"><%= resource.title %></a></h4>
+          <p>
+            <%= resource.notes %>
+          </p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="col-sm-6">
+      <h3>Hottest Resources</h3>
+      <% @hot_resources.each do |resource| %>
+        <div class="panel panel-default">
+          <div class="panel-body">
+          <small class="pull-right">Net Votes <%= resource.netvotes %></small>
+          <h4><a href="<%= resource.link %>" target="_blank"><%= resource.title %></a></h4>
+          <p>
+            <%= resource.notes %>
+          </p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -6,6 +6,8 @@ class Resource < ActiveRecord::Base
   validates :notes, presence: true, length: {in: 10..600}
   validates :category_id, presence: true
 
+  scope :recently_created, -> (number = 5) { order("created_at DESC").limit(number) }
+
   acts_as_votable
 
   def upvotes

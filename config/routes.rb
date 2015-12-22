@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
+
+  get '/favorites' => 'resources#favorites', as: :favorites
+
   resources :resources do
     member do
       put 'upvote', to: 'resources#upvote'
@@ -12,6 +15,7 @@ Rails.application.routes.draw do
 
   get 'pages/home'
   get 'pages/about'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
