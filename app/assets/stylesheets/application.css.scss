@@ -12,6 +12,11 @@
  *
  *= require_tree .
  *= require_self
+ *= require shared
+ *= require categories
+ *= require pages
+ *= require resources
+ *= require scaffolds
  */
 
 html {
