@@ -13,116 +13,11 @@
  *= require_tree .
  *= require_self
  *= require shared
+ *= require layout
  *= require categories
  *= require pages
  *= require resources
  *= require scaffolds
  */
 
-html {
-  position: relative;
-  min-height: 100%;
-}
 
-body {
-  padding-top: 50px;
-  font-family: 'Lato', sans-serif;
-  margin-bottom: 60px;
-}
-
-.brand-text {
-  color: #777;
-  font-weight: 700;
-}
-
-.fa-sm {
-  font-size: 0.6em;
-}
-
-.panel {
-  overflow: hidden;
-}
-
-.vote-box {
-  // background-color: rgba(240, 173, 78, 0.5);
-  // border-radius: 5px;
-  // width: 80px;
-  // margin: 0 auto;
-  color: #AAA;
-  font-weight: 500;
-  a {
-    color: #CCC;
-
-    &:hover {
-      color: #AAA;
-    }
-  }
-}
-
-.resource {
-  margin-top: 10px;
-}
-
-.filter {
-  margin-bottom: 2px;
-}
-
-.navbar-right {
-  margin-right: 0;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-.footer {
-  height: 40px;
-  background-color: #9D9D9D;
-  color: #DDDDDD;
-  padding-top: 10px;
-  margin-top: 20px;
-  overflow: auto;
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  left: 0px;
-}
-
-.footer a {
-  color: #DDDDDD;
-  text-decoration: none
-}
-
-.footer a:hover {
-  color: white;
-  text-decoration: none;
-}
-
-.left {
-  text-align: left;
-}
-
-.center {
-  text-align: center;
-}
-
-.right {
-  text-align: right;
-}
-
-.devise {
-  background-color: rgba(0,0,0,0.2);
-  padding: 1em 3em 3em 3em;
-  border-radius: 5px;
-  margin: 0 auto;
-  margin-top: 20px;
-  width: 500px;
-
-  div.other-links {
-    margin-top: 0.7em;
-
-    a {
-      padding: 5px 0 5px 0;
-    }
-  }
-}

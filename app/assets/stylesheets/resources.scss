@@ -6,3 +6,27 @@
   margin-top: 10px;
   float: right;
 } /* .resource-icons */
+
+.resource {
+  margin-top: 10px;
+}
+
+.filter {
+  margin-bottom: 2px;
+}
+
+.vote-box {
+  // background-color: rgba(240, 173, 78, 0.5);
+  // border-radius: 5px;
+  // width: 80px;
+  // margin: 0 auto;
+  color: #AAA;
+  font-weight: 500;
+  a {
+    color: #CCC;
+
+    &:hover {
+      color: #AAA;
+    }
+  }
+}/* vote-box */
