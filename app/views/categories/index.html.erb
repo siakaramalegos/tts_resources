@@ -13,8 +13,8 @@
             <%= category.name %></button>
           </a>
         </p>
-        <p><%= category.description %></p>
-        <div class="text-right">
+        <p><%= truncate(category.description, length: 70) %> <%= link_to "More", category_path(category), class: "readmore" %></p>
+        <div class="well-footer">
           <%= link_to fa_icon('pencil', text: 'Edit'), edit_category_path(category), class: "btn btn-default btn-xs" %>
           <%= link_to fa_icon('trash-o', text: 'Delete'), category, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-xs' %>
         </div>
